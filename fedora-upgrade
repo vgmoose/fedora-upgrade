@@ -19,7 +19,7 @@ function pause() {
 function continue_or_skip() {
    read -t 1 -n 10000 discard || [ $? -gt 128 ]
    echo -e $1
-   echo "This step is highly recomended, but can be safely skipped."
+   echo "This step is highly recommended, but can be safely skipped."
    ANSWER='XXX'
    while [ "$ANSWER" != "" -a "$ANSWER" != "S" ] ; do
      read -p "Hit Enter to continue, Ctrl + C to cancel or S + Enter to skip. " ANSWER
